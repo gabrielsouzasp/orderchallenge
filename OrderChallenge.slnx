@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/1. Web/">
+    <Project Path="src/OrderGenerator.Web/OrderGenerator.csproj" />
+  </Folder>
+  <Folder Name="/2. Service/">
+    <Project Path="src/OrderAccumulator/OrderAccumulator.csproj" />
+  </Folder>
+  <Folder Name="/3.Tests/">
+    <Project Path="tests/OrderChallenge.Tests/OrderChallenge.Tests.csproj" Id="358fcb42-3bca-4d82-aafd-17700d71e047" />
+  </Folder>
+</Solution>

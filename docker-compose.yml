@@ -1,0 +1,20 @@
+services:
+  orderaccumulator:
+    build:
+      context: .
+      dockerfile: src/OrderAccumulator/Dockerfile
+    container_name: orderaccumulator
+    restart: unless-stopped
+
+  ordergenerator:
+    build:
+      context: .
+      dockerfile: src/OrderGenerator.Web/Dockerfile
+    container_name: ordergenerator
+    environment:
+      FIX_SOCKET_CONNECT_HOST: orderaccumulator
+    ports:
+      - "5121:8080"
+    depends_on:
+      - orderaccumulator
+    restart: unless-stopped
